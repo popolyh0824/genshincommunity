@@ -451,6 +451,14 @@
             </footer>
 
         </div>
+        <script>
+            $(".main-menu>li").mouseover(function(){
+                $(this).children(".sub-menu").stop().slideDown();
+                })
+               $(".main-menu>li").mouseleave(function(){
+                $(this).children(".sub-menu").stop().slideUp();
+                })
+        </script>
 </body>
 
 </html>
