@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+
+}
+
+header{
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo1 {
+    width: 200px;
+    height: 100px;
+}
+
+.logo1 img {
+    width: 200px;
+    height: 100px;
+}
+
+nav {
+    width: 600px;
+    height: 100px;
+}
+
+.main-menu{
+ width: 600px;
+ height: 100px;
+ display: flex;
+ justify-content: space-between; align-items: flex-end;
+ 
+}
+.main-menu>li{
+/*메뉴가 4개면 width: 25% */
+ /*높이를 지정하지 않으면 밀림현상 발생*/
+ width: 50%;
+ height: 25px;
+ text-align: center;
+}
+.main-menu>li:hover>a{
+ color: white;
+ background-color: black;
+}
+.sub-menu{
+ display: none;
+ /*슬라이드 위쪽으로 배치*/
+ position: relative;
+ z-index: 20;
+ background-color: white;
+}
+.sub-menu>li:hover>a{
+ color: white;
+ background-color: black;
+}
+
+.slide{
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+ }
+.slide ul{
+    /*그림사이의 공백 제거*/
+    font-size: 0;
+    overflow: hidden;
+}
+.slide ul li{
+    /*animation은 반드시 li 태그한테 적용*/
+    animation: slide 6s infinite;
+}
+.slide img{
+    width: 1200px;
+    height: 300px;
+}
+@keyframes slide{
+    0%{
+    transform: translateY(-0px);
+    }
+    33%{
+    transform: translateY(-300px);
+    }
+    66%{
+    transform: translateY(-600px);
+    }
+    100%{
+    transform: translateY(-0px);
+    }
+}
+.contents {
+    width: 1200px;
+    height: 200px;
+    display: flex;
+    border: 1px solid black;
+}
+
+.notice {
+    width: 400px;
+    height: 200px;
+
+}
+
+button{
+    width: 100px;
+    background-color: darkgrey;
+    color: black;
+}
+.tab-news {
+    width: 400px;
+    height: 180px;
+    
+}
+.tab-news ul li {
+    border: 1px solid black;
+}
+.tab-gallery {
+    width: 400px;
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tab-gallery img {
+    width: 120px;
+    height: 120px;
+}
+.discord {
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discord img {
+    width: 230px;
+    height: 190px;
+}
+
+.opchat {
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opchat img {
+    width: 200px;
+    height: 190px;
+}
+
+#layer_popup {
+    display: none;
+}
+
+#layer_popup+label {
+    display: inline-block;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+}
+
+#layer_bg {
+    display: none;
+    position: absolute;
+    /* 시작 지점을 버튼 위, 0픽셀부터 시작하려고 주는 것*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+#popup {
+    position: absolute;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+    /*x y 번짐 색상*/
+}
+
+#popup>h2 {
+    margin-bottom: 25px;
+}
+
+#popup>h2>label {
+    float: right;
+}
+
+#layer_popup:checked+label+#layer_bg {
+
+    display: block;
+}
+
+#layer_pop {
+    display: none;
+}
+
+#layer_pop+label {
+    display: inline-block;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+}
+
+#layer_bt {
+    display: none;
+    position: absolute;
+    /* 시작 지점을 버튼 위, 0픽셀부터 시작하려고 주는 것*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+#pop {
+    position: absolute;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 600px;
+    height: 400px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+    /*x y 번짐 색상*/
+}
+
+#layer_pop:checked+label+#layer_bt {
+
+    display: block;
+}
+
+
+
+
+
+
+
+footer{
+    width: 1200px;
+    height: 100px;
+    display: flex;
+}
+
+.logo2 {
+    width: 200px;
+    height: 100px;
+}
+
+.logo2 img {
+    width: 200px;
+    height: 100px
+}
+
+.copy {
+    width: 800px;
+    height: 100px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.sns {
+    width: 200px;
+    height: 100px;
+
+    display: flex;
+
+    padding-top: 20px;
+}
+
+.sns img {
+    width: 60px;
+    
+}
