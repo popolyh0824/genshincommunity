@@ -111,13 +111,14 @@ nav {
     width: 1200px;
     height: 200px;
     display: flex;
-    border: 1px solid black;
+    border: 1px solid #ccc;
 }
 
 .notice {
     width: 400px;
     height: 200px;
 
+    border: 1px solid #ccc;
 }
 
 button{
@@ -276,6 +277,8 @@ footer{
     width: 1200px;
     height: 100px;
     display: flex;
+
+    border: 1px solid #ccc;
 }
 
 .logo2 {
